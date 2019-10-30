@@ -7,6 +7,7 @@ node{
     //docker.image('buildbot:2.5.2').inside('-v $HOME/workdir:/home/buildbot/workdir -v $HOME/tools:/home/buildbot/tools') {
       //git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
       //sh 'go build'
+      sh 'docker run -it --rm -v $HOME/workdir:/home/buildbot/workdir -v $HOME/tools:/home/buildbot/tools -v $HOME/.ssh:/home/buildbot/.ssh -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix buildbot:2.5.2 /bin/bash'
       sh 'ls'
       sh 'cd ~'
       //sh 'which go'
