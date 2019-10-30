@@ -5,10 +5,10 @@ node{
   stage('Build'){    
 
     docker.image('golang:latest').inside {
-      git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
+     // git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
       sh 'go build'
       sh 'ls'
-      sh 'cd ..'
+      sh 'cd ~'
       sh 'ls'
     }
   }
