@@ -2,6 +2,7 @@ node{
   
   stage('get Code') {
     git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
+    sh 'npm version'
   }
 
   // 镜像中代码构建
