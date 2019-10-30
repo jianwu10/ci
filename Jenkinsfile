@@ -8,7 +8,6 @@ node{
       git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
       sh 'npm version'
       sh 'ls'
-      sh 'go build'
       sh 'cd ..'
       sh 'ls'
     }
