@@ -11,7 +11,7 @@ node{
       sh 'cd ~'
       //sh 'which go'
       sh 'mkdir workdir'
-      sh 'cd workdir'
+      sh 'cd ~/workdir'
       sh 'ls'
     }
   }
