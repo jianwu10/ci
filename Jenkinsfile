@@ -11,6 +11,8 @@ node{
       sh 'go version'
       sh 'ls'
       sh 'go build'
+      sh 'cd ..'
+      sh 'ls'
     }
   }
 }
