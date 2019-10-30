@@ -1,10 +1,9 @@
 pipeline {
-    agent { docker { image 'golang' } }
+    agent { docker { image 'node:6.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'go version'
-                sh 'yarn version'
+                sh 'npm --version'
             }
         }
     }
