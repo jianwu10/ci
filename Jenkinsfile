@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'go version'
+                sh 'ls'
+                sh 'cd tools'
+                sh 'ls'
             }
         }
     }
