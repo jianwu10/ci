@@ -15,4 +15,19 @@ node{
       sh 'ls'
     }
   }
+  
+  stage('get Code') {
+    git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/sensor.git'
+  }
+  
+  stage('Build'){    
+
+    docker.image('golang:latest').inside {
+      sh 'go version'
+      sh 'ls'
+      sh 'go build'
+      sh 'cd ..'
+      sh 'ls'
+    }
+  }
 }
