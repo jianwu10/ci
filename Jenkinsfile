@@ -6,7 +6,7 @@ node{
 
     docker.image('golang:latest').inside {
       git credentialsId: 'git-credential', url: 'https://gitlab.com/bluvec/sw/controller.git'
-      sh 'npm version'
+      sh 'go build'
       sh 'ls'
       sh 'cd ..'
       sh 'ls'
