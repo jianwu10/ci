@@ -9,6 +9,7 @@ node{
 
     docker.image('golang:latest').inside {
       sh 'go version'
+      sh 'ls'
       sh 'go build'
     }
   }
