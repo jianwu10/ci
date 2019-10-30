@@ -14,6 +14,7 @@ node{
       //sh 'mkdir workdir'
       //sh 'cd ~/workdir'
       sh 'ls'
+      sh 'whoami'
     }
   //}
 }
