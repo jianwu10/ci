@@ -8,7 +8,7 @@ node{
   stage('Build'){    
 
     docker.image('buildboot:2.5.1').inside {
-      sh 'go version'
+      sh 'npm version'
       sh 'ls'
       sh 'go build'
       sh 'cd ..'
