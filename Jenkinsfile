@@ -7,7 +7,7 @@ node{
   // 镜像中代码构建
   stage('Build'){    
 
-    docker.image('golang:latest').inside {
+    docker.image('buildbot:2.5.2').inside {
       sh 'go version'
       sh 'ls'
       sh 'go build'
@@ -22,7 +22,7 @@ node{
   
   stage('Build'){    
 
-    docker.image('golang:latest').inside {
+    docker.image('buildbot:2.5.2').inside {
       sh 'go version'
       sh 'ls'
       sh 'go build'
