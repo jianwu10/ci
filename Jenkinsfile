@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'buildbot:2.5.2' } }
+    agent { docker { image 'golang:latest' } }
     stages {
         stage('build') {
             steps {
                 sh 'ls -a'
+                sh 'go version'
             }
         }
     }
